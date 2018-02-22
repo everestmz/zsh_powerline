@@ -63,8 +63,8 @@ time_since_commit()() {
 rvm_info_for_prompt() {
   if [[ -d ~/.rvm/ ]]; then
     local ruby_version=$(~/.rvm/bin/rvm-prompt)
-    if [ -n "$ruby_version" ]; then
-      echo "$ruby_version"
+    if hash docker; then
+      echo "$(echo $(docker ps | wc -l )-1 | bc)"
     fi
   else
     echo ""
