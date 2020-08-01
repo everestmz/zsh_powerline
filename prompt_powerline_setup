@@ -70,7 +70,6 @@ prompt_powerline_precmd() {
   zstyle ':vcs_info:*:prompt:*' formats "${fmt_branch}"
 
   vcs_info 'prompt'
-  RVM_PRECMD_INFO=$(rvm_info_for_prompt)
 
   # zstyle ':prezto:module:ruby' rvm '%r'
 }
